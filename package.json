@@ -1,7 +1,7 @@
 {
   "name": "@hyperdivision/crypto-payment-url",
   "version": "1.0.0",
-  "description": "",
+  "description": "Generate payment URLs and QR Codes for cryptocurrencies",
   "main": "index.js",
   "publishConfig": {
     "access": "public"

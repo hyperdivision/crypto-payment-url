@@ -15,11 +15,25 @@ var cryptoUrlQr = require('crypto-payment-url/qrcode')
 
 ### `cryptoUrl.ethereum({ address, functionName, args, amount, gas, gasLimit, gasPrice, chainId })`
 
+Returns a `String` encoding the above parameters as a `ethereum:` URL.
+Be aware that some wallets do not support all parameters.
+Specified in [EIP 681: URL Format for Transaction Requests](https://eips.ethereum.org/EIPS/eip-681)
+
 ### `cryptoUrl.bitcoin({ address, amount, label, message, lightning })`
+
+Returns a `String` encoding the above parameters as a `bitcoin:` URL.
+Be aware that some wallets do not support all parameters.
+Specified in [BIP 21: URI Scheme](https://github.com/bitcoin/bips/blob/master/bip-0021.mediawiki)
 
 ### `cryptoUrlQr.ethereum({ address, functionName, args, amount, gas, gasLimit, gasPrice, chainId })`
 
+Works like `cryptoUrl.ethereum`, but returns an object of `{ qrcode: String, url: String }`,
+Where `qrcode` is a string of SVG code.
+
 ### `cryptoUrlQr.bitcoin({ address, amount, label, message, lightning })`
+
+Works like `cryptoUrl.bitcoin`, but returns an object of `{ qrcode: String, url: String }`,
+Where `qrcode` is a string of SVG code.
 
 ## Install
 
