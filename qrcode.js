@@ -3,6 +3,7 @@ var urls = require('.')
 
 module.exports = {
   bitcoin: wrap(urls.bitcoin),
+  lightning: wrap(urls.lightning),
   ethereum: wrap(urls.ethereum)
 }
 

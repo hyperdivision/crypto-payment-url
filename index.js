@@ -16,6 +16,17 @@ function bitcoin ({ address, amount, label, message, lightning }) {
   return url.format(uri)
 }
 
+function lightning ({ lnurl }) {
+  const uri = {
+    protocol: 'lightning',
+    hostname: lnurl,
+    pathname: '',
+    query: {}
+  }
+
+  return url.format(uri)
+}
+
 function ethereum ({ address, functionName = '', args = {}, amount, gas, gasLimit, gasPrice, chainId }) {
   const uri = {
     protocol: 'ethereum',
@@ -37,5 +48,6 @@ function ethereum ({ address, functionName = '', args = {}, amount, gas, gasLimi
 
 module.exports = {
   bitcoin,
-  ethereum
+  ethereum,
+  lightning
 }
