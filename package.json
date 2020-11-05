@@ -1,6 +1,6 @@
 {
   "name": "crypto-payment-url",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "Generate payment URLs and QR Codes for cryptocurrencies",
   "main": "index.js",
   "publishConfig": {
